@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { View, Text, StatusBar, Image, Button, TextInput, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { StyleSheet } from 'react-native';
 
-export default function App() {
+
+export default function TabOneScreen() {
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -11,9 +13,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
+      <StatusBar />
       <View>
-        <Image source={require('./assets/favicon.png')} />
+        <Image source={require('../../assets/images/favicon.png')} />
       </View>
       <TextInput
         style={styles.username}
@@ -49,7 +51,7 @@ export default function App() {
   );
 }
 
-const styles = {
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -130,4 +132,4 @@ const styles = {
     margin: 5,
     padding: 2,
   }
-};
+});
