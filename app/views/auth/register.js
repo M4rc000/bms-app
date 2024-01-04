@@ -4,8 +4,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
 import authStyles from '../../styles/authStyles.js';
 
-const image = require('../../../assets/login.png');
-const logo = require('../../../assets/favicon.png');
+const image = require('../../../assets/images/login.png');
+const logo = require('../../../assets/images/favicon.png');
 
 
 export default function register() {

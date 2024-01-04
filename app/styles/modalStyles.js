@@ -5,50 +5,68 @@ const modalStyles = () => {
     const [fontsLoaded] = useFonts({
         'LongCang-Regular': require('../../assets/fonts/LongCang-Regular.ttf'),
         'Montserrat-Bold': require('../../assets/fonts/Montserrat-Bold.ttf'),
+        'Montserrat-Regular': require('../../assets/fonts/Montserrat-Regular.ttf'),
     });
 
     const style = StyleSheet.create({
-        centeredView: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 22,
+        modal:{
+            width: 350,
+            height: 315,
+            backgroundColor: '#0f53bb',
+            marginTop: 80,
+            marginRight: 20,
+            alignSelf: 'flex-end',
+            borderRadius: 20,
         },
-        modalView: {
-        margin: 20,
-        backgroundColor: 'white',
-        borderRadius: 20,
-        padding: 35,
-        alignItems: 'center',
-        shadowColor: '#000',
-        shadowOffset: {
-            width: 0,
-            height: 2,
+        modalHeader:{
+            flexDirection: 'row'
         },
-        shadowOpacity: 0.25,
-        shadowRadius: 4,
-        elevation: 5,
+        textHeader: {
+            flex: 1,
+            margin: 15,
+            padding: 5,
+            fontFamily: fontsLoaded ? 'Montserrat-Regular' : 'System',
+            fontSize: 16,
+            color: 'white'
         },
-        button: {
-        borderRadius: 20,
-        padding: 10,
-        elevation: 2,
+        closeBtn:{
+            flex: 2,
+            margin: 10,
+            padding: 5,
         },
-        buttonOpen: {
-        backgroundColor: '#F194FF',
+        modalBody: {
+            backgroundColor: 'green',
+            height: 260,
+            borderBottomLeftRadius: 20,
+            borderBottomRightRadius: 20,
         },
-        buttonClose: {
-        backgroundColor: '#2196F3',
+        colContainer: {
+            borderRadius: 20,
         },
-        textStyle: {
-        color: 'white',
-        fontWeight: 'bold',
-        textAlign: 'center',
+        column:{
+            flexDirection: 'row',
+            backgroundColor: 'white',
+            paddingTop: 15,
+            paddingBottom: 12,
+            marginTop: 0,
+            height: 65,
+            borderBottomColor: '#898989',
+            borderBottomWidth: .4
         },
-        modalText: {
-        marginBottom: 15,
-        textAlign: 'center',
-        },
+        colImage:{
+            width: 40,
+            height: 40,
+            borderRadius: 40,
+            marginLeft: 10,
+            marginBottom: 5,
+            justifyContent: 'center',
+            alignSelf: 'center'
+        },  
+        colText:{
+            marginLeft: 10,
+            marginTop: -5,
+            color: 'black',
+        }
     });
     return style;
 }

@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     navContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        backgroundColor: '#fff',
+        backgroundColor: '#0f53bb',
         fontSize: 30,
         height: 50,
         alignItems: 'center',
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     },
     headerText: {
         fontWeight: 'bold',
-        color: '#000',
+        color: 'white',
         fontSize: 18,
         margin: 12,
         fontFamily: fontsLoaded ? 'Montserrat-Bold' : 'System',
